@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bfram6rxuwggo"]
+
+[ext_resource type="Script" uid="uid://xcxolrtobe0y" path="res://potion.gd" id="1_0ow0d"]
+[ext_resource type="Texture2D" uid="uid://bj5h5m3mhrbgg" path="res://icon.svg" id="2_xjxog"]
+
+[node name="Potion" type="Node2D" unique_id=2144494785]
+script = ExtResource("1_0ow0d")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=121296735]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_xjxog")

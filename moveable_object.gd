@@ -37,6 +37,16 @@ func is_wall(cell: Vector2i) -> bool:
 	if not data:
 		return false
 	return data.get_custom_data("is_wall")
+
+func is_potion(cell: Vector2i) -> int:
+	var data := map.get_cell_tile_data(cell)
+	
+	if not data:
+		return -1
+	if data.get_custom_data("is_potion"):
+		return data.get_custom_data("potion_index")
+	else:
+		return -1
 	
 func get_projectile(cell: Vector2i) -> Projectile:
 	for projectile in get_tree().get_nodes_in_group(&"projectile"):

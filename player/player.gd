@@ -8,6 +8,7 @@ const MOVE_INTERVAL := 0.2
 var move_cooldown := 0.0
 var step_len := 1
 var has_superpower := false
+@onready var inventory = $Inventory
 
 func _ready() -> void:
 	super._ready()
@@ -33,7 +34,12 @@ func _process(delta: float) -> void:
 	var dest :=	cell_position + dir * step_len
 	if is_wall(dest):
 		return
-		
+	#var pick_up = is_potion(dest)
+	#if pick_up:
+		#inventory.add_potion(pick_up)
+	#if is_effect_tile(dest):
+		#pass
+	
 	var projectile := get_projectile(dest)
 	if projectile:
 		var projectile_dest

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://coln84fdlp385" path="res://player/player.gd" id="1_onrkg"]
 [ext_resource type="Texture2D" uid="uid://bho2o00gv2ry4" path="res://player/player.png" id="2_onrkg"]
+[ext_resource type="Script" uid="uid://dv7v5rss2y3gt" path="res://player/inventory.gd" id="3_g1dw6"]
 
 [node name="Player" type="Node2D" unique_id=267222947]
 z_index = 1
@@ -11,3 +12,6 @@ script = ExtResource("1_onrkg")
 position = Vector2(1, -10)
 texture = ExtResource("2_onrkg")
 region_rect = Rect2(32, 160, 32, 32)
+
+[node name="Inventory" type="Node2D" parent="." unique_id=1062177868]
+script = ExtResource("3_g1dw6")
